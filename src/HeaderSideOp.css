@@ -1,0 +1,25 @@
+.headersideop{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-right: 20px;
+    color: grey;
+    cursor: pointer;
+}
+
+.headersideop:hover{
+    color:black;
+    border-bottom: 1px solid black;
+}
+
+.headersideop > h3{
+    font-size: 12px;
+    font-weight:400
+}
+
+.headersideop__icon{
+    object-fit: contain;
+    height: 25px !important;
+    width: 25px !important;
+
+}
