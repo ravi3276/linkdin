@@ -1,0 +1,54 @@
+.widgets{
+    flex:0.2;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border: 1px solid lightgrey;
+    height:fit-content;
+    position: sticky;
+    top:80px;
+}
+
+.widgets__header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px
+}
+
+.widgets__header>h2{
+    font-size: 18px;
+}
+
+.widgets__news{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px;
+    border: 1px solid whitesmoke;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.widgets__news > .MuiSvgIcon-root{
+    font-size:16px;
+    color:rgb(112, 133, 249);
+}
+
+.widgets__newsRight{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.widgets__newsRight>h2{
+    font-size: 18px;
+    font-weight:700;
+}
+.widgets__newsRight>h3{
+    font-size:14px;
+    font-weight:400;
+    color:grey;
+}

@@ -8,8 +8,16 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import WorkIcon from '@material-ui/icons/Work';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import HeaderSideOp from './HeaderSideOp';
-
+import {auth} from './firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import {logout, selectUser} from './features/userSlice';
 function Header() {
+    const  user= useSelector(selectUser)
+    const dispatch =useDispatch();
+    const out=()=>{
+        dispatch(logout())
+        auth.signOut();
+    }
     return (
         <div className="header">
             <div className="header__left">
@@ -26,8 +34,8 @@ function Header() {
                 <HeaderSideOp Icon={WorkIcon} title="Jobs"/>
                 <HeaderSideOp Icon={ChatBubbleIcon} title="Messages"/>
                 <HeaderSideOp Icon={NotificationsIcon} title="Notifications"/>
-                <HeaderSideOp avatar="https://images.pexels.com/photos/1232594/pexels-photo-1232594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 title="Me"/>
+                <HeaderSideOp onClick={out} avatar="https://images.pexels.com/photos/1232594/pexels-photo-1232594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                 title={user?.displayName}/>
             </div>
             </div>
     )
